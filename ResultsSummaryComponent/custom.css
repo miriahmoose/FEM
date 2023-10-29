@@ -1,0 +1,243 @@
+html,
+[data-bs-theme='light'] {
+	--bd-visual-link: rgb(17, 37, 212);
+	--bd-visual-code-color: #2b3ded;
+	--bs-visual-text-emphasis: #2b3ded;
+	--bs-visual-bg-subtle: #e7e9fd;
+	--bs-visual-border-subtle: #5a69f2;
+	--bd-verbal-link: hsl(166, 100%, 37%);
+	--bd-verbal-code-color: #00b389;
+	--bs-verbal-text-emphasis: #00b389;
+	--bs-verbal-bg-subtle: #e5fff9;
+	--bs-verbal-border-subtle: #00e6b0;
+	--bd-memory-link: hsl(39, 100%, 56%);
+	--bd-memory-code-color: #ffaf1a;
+	--bs-memory-text-emphasis: #ffaf1a;
+	--bs-memory-bg-subtle: #fff6e5;
+	--bs-memory-border-subtle: #e69500;
+	--bd-reaction-link: hsl(0, 100%, 67%);
+	--bd-reaction-code-color: #ff1a1a;
+	--bs-reaction-text-emphasis: #ff1a1a;
+	--bs-reaction-bg-subtle: #ffe5e5;
+	--bs-reaction-border-subtle: #b30000;
+}
+
+* {
+	font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body p {
+	font-size: 18px;
+}
+
+h2 {
+	font-weight: 800;
+	font-size: 52px;
+	margin: -0.5rem;
+}
+
+.alert {
+	--bs-alert-padding-y: 0;
+	--bs-alert-padding-x: 0;
+}
+
+.col-flex {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.visual,
+.verbal,
+.memory,
+.reaction {
+	width: 80%;
+	height: 50px;
+	margin-top: 1.25rem;
+	margin-left: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.visual {
+	--bs-link-color-rgb: var(--bd-visual-link);
+	--bs-code-color: var(--bd-visual-code-color);
+	color: var(--bd-visual-color, inherit);
+	background-color: var(--bd-visual-bg, var(--bs-gray-100));
+}
+
+.visual-info {
+	--bd-visual-color: var(--bs-visual-text-emphasis);
+	--bd-visual-bg: var(--bs-visual-bg-subtle);
+	--bd-visual-border: var(--bs-visual-border-subtle);
+}
+
+.verbal {
+	--bs-link-color-rgb: var(--bd-verbal-link);
+	--bs-code-color: var(--bd-verbal-code-color);
+	color: var(--bd-verbal-color, inherit);
+	background-color: var(--bd-verbal-bg, var(--bs-gray-100));
+}
+
+.verbal-success {
+	--bd-verbal-color: var(--bs-verbal-text-emphasis);
+	--bd-verbal-bg: var(--bs-verbal-bg-subtle);
+	--bd-verbal-border: var(--bs-verbal-border-subtle);
+}
+
+.memory {
+	--bs-link-color-rgb: var(--bd-memory-link);
+	--bs-code-color: var(--bd-memory-code-color);
+	color: var(--bd-memory-color, inherit);
+	background-color: var(--bd-memory-bg, var(--bs-gray-100));
+}
+
+.memory-warning {
+	--bd-memory-color: var(--bs-memory-text-emphasis);
+	--bd-memory-bg: var(--bs-memory-bg-subtle);
+	--bd-memory-border: var(--bs-memory-border-subtle);
+}
+
+.reaction {
+	--bs-link-color-rgb: var(--bd-reaction-link);
+	--bs-code-color: var(--bd-reaction-code-color);
+	color: var(--bd-reaction-color, inherit);
+	background-color: var(--bd-reaction-bg, var(--bs-gray-100));
+}
+
+.reaction-danger {
+	--bd-reaction-color: var(--bs-reaction-text-emphasis);
+	--bd-reaction-bg: var(--bs-reaction-bg-subtle);
+	--bd-reaction-border: var(--bs-reaction-border-subtle);
+}
+
+.card-container {
+	padding-top: 150px;
+	width: 800px;
+	display: flex;
+}
+
+.card {
+	border: none;
+	border-radius: 2rem;
+	box-shadow: 37px 10px 66px -23px rgba(0, 0, 0, 0.1);
+}
+
+.card-title,
+.exclaim {
+	padding-top: 1rem;
+}
+
+h5.card-title {
+	text-align: left;
+}
+
+.card-text-dark {
+	color: hsl(224, 30%, 27%);
+}
+
+.blue-circle {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	background-image: linear-gradient(
+		to bottom,
+		#4e21ca,
+		#4621ca,
+		#3d21ca,
+		#3221ca,
+		#2421ca
+	);
+	margin: auto;
+}
+
+.round-edge {
+	background-image: linear-gradient(
+		to bottom,
+		#7857ff,
+		#694cf9,
+		#5941f4,
+		#4736ee,
+		#2e2be9
+	);
+	border-radius: 2rem;
+	display: flex;
+}
+
+.bc-text {
+	padding-top: 2.75rem;
+}
+
+.p100 {
+	font-weight: 100;
+	font-size: 14px;
+}
+
+.blue-text {
+	margin: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	color: white;
+}
+
+.btn-dark {
+	margin-bottom: 1rem;
+	background-color: hsl(224, 30%, 27%);
+	border-radius: 6rem;
+}
+
+.btn:hover {
+	background-color: #697caf;
+	border-color: white;
+}
+
+@media screen and (max-width: 765px) {
+	.container {
+		padding: 0;
+	}
+
+	.card-container {
+		padding-top: 0;
+		display: inline;
+	}
+
+	.card {
+		box-shadow: none;
+	}
+
+	.row {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.round-edge {
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+	.col-xs-12 {
+		flex: 0 0 auto;
+		width: 100%;
+	}
+
+	.blue-text {
+		padding-top: 2rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.blue-text-sm {
+		font-size: 1rem;
+	}
+
+	h5.card-title {
+		margin-left: 1rem;
+	}
+
+	.reaction,
+	.memory,
+	.verbal,
+	.visual {
+		width: auto;
+	}
+}
