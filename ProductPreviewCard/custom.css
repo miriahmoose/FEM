@@ -1,0 +1,41 @@
+body {
+	font-size: 14px;
+	background-color: #f2ebe3;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Fraunces', serif;
+}
+
+.container-md {
+	margin-top: 15rem;
+}
+
+.price-new {
+	display: inline-block;
+	color: #3c8067;
+}
+
+.price-old {
+	text-decoration: line-through;
+	display: inline-block;
+}
+
+.card-perfume {
+	text-transform: uppercase;
+}
+
+button {
+	background-color: #3c8067;
+	color: white;
+	border: none;
+}
