@@ -45,7 +45,7 @@
 					<div class="col">
 						<img
 							src="images/image-product-desktop.jpg"
-							class="img-fluid rounded-start"
+							class="img-fluid rounded-start header-image"
 							alt="..." />
 					</div>
 					<div class="col">
@@ -84,5 +84,28 @@
 			<a href="#">M. Smith</a>
 			.
 		</div>
+		<script>
+			const headerImage = document.getElementById('header-image');
+
+// Function to update the image source based on screen size
+function updateHeaderImage(mediaQuery) {
+    if (mediaQuery.matches) {
+        headerImage.src = '/ProductPreviewCard/images/image-product-mobile.jpg';
+    } else {
+        headerImage.src = '/ProductPreviewCard/images/image-product-desktop.jpg';
+    }
+}
+
+// Create a media query for the desired screen size
+const mobileQuery = window.matchMedia('(max-width: 600px)');
+
+// Initial update on page load
+updateHeaderImage(mobileQuery);
+
+// Add an event listener to update the image when the media query matches
+mobileQuery.addEventListener('change', (event) => {
+    updateHeaderImage(event.currentTarget);
+});
+		</script>
 	</body>
 </html>

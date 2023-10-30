@@ -1,7 +1,3 @@
-html,
-[data-bs-theme='light'] {
-}
-
 body {
 	font-size: 14px;
 	background-color: #f2ebe3;
@@ -66,4 +62,16 @@ h2 {
 	color: white;
 	border: none;
 	transform: scale(110%);
+}
+
+@media screen and (max-width: 765px) {
+	div.row.g-0 {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container-md {
+		margin-top: 0;
+		--bs-gutter-x: 0;
+	}
 }
