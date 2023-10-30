@@ -1,3 +1,7 @@
+html,
+[data-bs-theme='light'] {
+}
+
 body {
 	font-size: 14px;
 	background-color: #f2ebe3;
@@ -14,6 +18,19 @@ h4,
 h5,
 h6 {
 	font-family: 'Fraunces', serif;
+}
+
+h2 {
+	font-weight: 700;
+}
+
+.card {
+	border: none;
+}
+
+.card-body {
+	margin-right: 0.5em;
+	margin-left: 0.5rem;
 }
 
 .container-md {
@@ -34,8 +51,19 @@ h6 {
 	text-transform: uppercase;
 }
 
-button {
+.btn,
+.btn:first-child:active {
 	background-color: #3c8067;
 	color: white;
 	border: none;
+	font-size: 12px;
+	height: 3rem;
+}
+
+.btn:hover,
+.btn:focus-visible {
+	background-color: #3c8067;
+	color: white;
+	border: none;
+	transform: scale(110%);
 }
