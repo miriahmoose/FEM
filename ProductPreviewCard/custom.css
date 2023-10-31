@@ -74,4 +74,9 @@ h2 {
 		margin-top: 0;
 		--bs-gutter-x: 0;
 	}
+
+	.header-image {
+		width: 100%;
+		border-radius: 1rem;
+	}
 }
