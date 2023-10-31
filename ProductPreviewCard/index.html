@@ -52,9 +52,11 @@
 						<div class="card-body">
 							<p class="card-perfume">Perfume</p>
 							<h2 class="card-title">
-								Gabrielle <br>
-                Essence Eau <br>
-                De Parfum
+								Gabrielle
+								<br />
+								Essence Eau
+								<br />
+								De Parfum
 							</h2>
 							<p class="card-text">
 								A floral, solar and voluptuous interpretation composed by
@@ -62,14 +64,14 @@
 							</p>
 							<h3 class="price-new">$149.99</h3>
 							<p class="price-old"><small>$169.99</small></p>
-							<p class="card-text">
-                <div class="d-grid gap-2">
-								<button type="button" class="btn">
-									<img src="images/icon-cart.svg" />
-									<span>Add to Cart</span>
-								</button>
-                </div>
-							</p>
+							<div class="card-text">
+								<div class="d-grid gap-2">
+									<button type="button" class="btn">
+										<img src="images/icon-cart.svg" />
+										<span>Add to Cart</span>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -87,25 +89,27 @@
 		<script>
 			const headerImage = document.getElementById('header-image');
 
-// Function to update the image source based on screen size
-function updateHeaderImage(mediaQuery) {
-    if (mediaQuery.matches) {
-        headerImage.src = '/ProductPreviewCard/images/image-product-mobile.jpg';
-    } else {
-        headerImage.src = '/ProductPreviewCard/images/image-product-desktop.jpg';
-    }
-}
+			// Function to update the image source based on screen size
+			function updateHeaderImage(mediaQuery) {
+				if (mediaQuery.matches) {
+					headerImage.src =
+						'/ProductPreviewCard/images/image-product-mobile.jpg';
+				} else {
+					headerImage.src =
+						'/ProductPreviewCard/images/image-product-desktop.jpg';
+				}
+			}
 
-// Create a media query for the desired screen size
-const mobileQuery = window.matchMedia('(max-width: 600px)');
+			// Create a media query for the desired screen size
+			const mobileQuery = window.matchMedia('(max-width: 600px)');
 
-// Initial update on page load
-updateHeaderImage(mobileQuery);
+			// Initial update on page load
+			updateHeaderImage(mobileQuery);
 
-// Add an event listener to update the image when the media query matches
-mobileQuery.addEventListener('change', (event) => {
-    updateHeaderImage(event.currentTarget);
-});
+			// Add an event listener to update the image when the media query matches
+			mobileQuery.addEventListener('change', (event) => {
+				updateHeaderImage(event.currentTarget);
+			});
 		</script>
 	</body>
 </html>
